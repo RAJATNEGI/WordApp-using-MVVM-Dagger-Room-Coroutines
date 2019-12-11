@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity(),WordAdapter.mClick {
             }
         })
 
+
+
+        var word = DaggerWord
         save.setOnClickListener {
             viewModel!!.insert(Word(0, wordEt.text.toString()))
             wordEt.setText("")
