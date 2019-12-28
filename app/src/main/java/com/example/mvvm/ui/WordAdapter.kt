@@ -1,4 +1,4 @@
-package com.example.mvvm.word
+package com.example.mvvm.ui
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,11 +8,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvm.R
+import com.example.mvvm.db.Word
 
 class WordAdapter(private val context:Context) : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
     private var list = emptyList<Word>()
-    private val listener:mClick = context as mClick
+    private val listener: mClick = context as mClick
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
@@ -46,6 +47,6 @@ class WordAdapter(private val context:Context) : RecyclerView.Adapter<WordAdapte
 
 
     interface mClick{
-        fun deleteClick(word:Word)
+        fun deleteClick(word: Word)
     }
 }
